@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudQueue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">CQ</span>
+                <span>CloudQueue</span>
+            </div>
+
+            <p class="workspace-label">PERSONAL WORKSPACE</p>
+
+            <nav class="navigation">
+                <button class="nav-button active">▦ Overview</button>
+                <button class="nav-button">▣ Applications</button>
+                <button class="nav-button">◔ Insights</button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>● Azure-ready</p>
+                <small>Local demo mode</small>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="date-label">THURSDAY, 17 SEPTEMBER</p>
+                    <h1>Good morning, Aastha.</h1>
+                </div>
+
+
+                <button class="add-button" id="add-application-button">
+                    + Add application
+                </button>
+            </header>
+
+            <section class="welcome-card">
+                <p class="date-label">YOUR JOB SEARCH, ORGANIZED</p>
+                <h2>Move every opportunity forward.</h2>
+                <p>Keep applications, interview dates, and follow-ups in one calm place.</p>
+            </section>
+
+            <section class="stats-grid">
+  <article class="stat-card">
+    <p>Total applications</p>
+    <h2 id="total-count">0</h2>
+    <small>Start by adding one</small>
+  </article>
+
+  <article class="stat-card">
+    <p>In progress</p>
+    <h2 id="progress-count">0</h2>
+    <small>Applied + interviewing</small>
+  </article>
+
+  <article class="stat-card">
+    <p>Interviews</p>
+    <h2 id="interview-count">0</h2>
+    <small>Across all rounds</small>
+  </article>
+
+  <article class="stat-card">
+    <p>Offers</p>
+    <h2 id="offer-count">0</h2>
+    <small>Worth celebrating</small>
+  </article>
+</section>
+            <section class="recent-applications">
+                <div class="section-heading">
+                    <div>
+                        <h2>Recent applications</h2>
+                        <p>Your latest opportunities</p>
+                    </div>
+
+                    <button class="view-all-button">View all →</button>
+                </div>
+                <div id="recent-list"></div>
+
+            </section>
+        </main>
+
+    </div>
+    <div class="modal hidden" id="application-modal">
+        <div class="modal-box">
+
+            <div class="modal-header">
+                <div>
+                    <p class="date-label">APPLICATION DETAILS</p>
+                    <h2>Add application</h2>
+                </div>
+
+                <button class="close-button" id="close-modal-button">×</button>
+            </div>
+
+            <div class="form-grid">
+                <label>
+                    Company name
+                    <input type="text" id="company-input" placeholder="Example: Microsoft">
+                </label>
+
+                <label>
+                    Role
+                    <input type="text" id="role-input" placeholder="Example: Cloud Engineer">
+                </label>
+
+                <label>
+                    Status
+                    <select id="status-input">
+                        <option>Wishlist</option>
+                        <option>Applied</option>
+                        <option>Interviewing</option>
+                        <option>Offer</option>
+                        <option>Rejected</option>
+                    </select>
+                </label>
+
+                <label>
+                    Next step
+                    <input type="text" id="next-step-input" placeholder="Example: Technical interview">
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button class="cancel-button" id="cancel-button">Cancel</button>
+                <button class="save-button" id="save-application-button">
+                    Save application
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
